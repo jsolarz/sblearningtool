@@ -1,0 +1,7 @@
+add a black frame around the white header
+Move the "free Bets" down
+change the fonts to Masters fonts
+Add Masterd logo
+Remove the footer
+Add orange borded when hoover
+Make the video popup a bit larger
