@@ -5,13 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>SB Learning Tool</title>
-        <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Roboto&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
         <link rel="stylesheet" type="text/css" media="all" href="site.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css"
-            rel="stylesheet"
-        />
+        <link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet" />
     </header>
     <body>
         <!-- Overlay -->
@@ -19,57 +16,44 @@
         <!-- Popup -->
         <div class="popup" id="popup" style="display:none;">
             <div class="popup-inner">
-                <input
-                    type="button"
-                    name="Close"
-                    class="s3-btn-close"
-                    onclick="popupClose();"
-                    value="&times;"
-                />
+                <input type="button" name="Close" class="s3-btn-close" onclick="popupClose();" value="&times;" />
 
-                <h2>Video player</h2>
-                <video controls poster="http://placekitten.com/640/300">
-                        <source src="devstories.webm"
-                                type='video/webm;codecs="vp8, vorbis"' />
-                        <source src="devstories.mp4"
-                                type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-                        <track src="devstories-en.vtt" label="English subtitles"
-                               kind="subtitles" srclang="en" default></track>
-                      </video>
+                <h2 class="video-title">Video player</h2>
+                <video id="helpVideo" controls="controls" poster="http://placekitten.com/640/300"></video>
             </div>
         </div>
         <div class="container">
             <header>
-                <h1 class="header-title">Watch & Learn
-
-                </h1><div class="logo-container">
-                        <img src="SBTECH_LOGO_RGB_COLOUR.PNG" height="100" width="100">
-                    </div>
-
+                <h1 class="header-title">Watch & Learn</h1>
+                <div class="logo-container">
+                    <img src="SBTECH_LOGO_RGB_COLOUR.PNG" height="100" width="100" />
+                </div>
             </header>
-            <nav><h1>Menu</h1>
+            <nav>
+                <h1>Menu</h1>
                 <ul class="Accordion">
-                        <li class="Accordion-item">
-                          <label for="checkboxes-menu1">Free Bets</label>
-                          <input id="checkboxes-menu1" type="checkbox" name="menu" />
-                          <ul class="Accordion-subElements">
-                            <li class="Accordion-subElement"><a href="#">Video 1</a></li>
-                            <li class="Accordion-subElement"><a href="#">Video 2</a></li>
-                            <li class="Accordion-subElement"><a href="#">Video 3</a></li>
-                            <li class="Accordion-subElement"><a href="#">Video 4</a></li>
-                          </ul>
-                        </li>
-                        <li class="Accordion-item">
-                          <label for="checkboxes-menu2">Jackpots</label>
-                          <input id="checkboxes-menu2" type="checkbox" name="menu" />
-                          <ul class="Accordion-subElements">
-                                <li class="Accordion-subElement"><a href="#">Video 1</a></li>
-                                <li class="Accordion-subElement"><a href="#">Video 2</a></li>
-                                <li class="Accordion-subElement"><a href="#">Video 3</a></li>
-                                <li class="Accordion-subElement"><a href="#">Video 4</a></li>
-                          </ul>
-                        </li>
-                      </ul></nav>
+                    <li class="Accordion-item">
+                        <label for="checkboxes-menu1">Free Bets</label>
+                        <input id="checkboxes-menu1" type="checkbox" name="menu" />
+                        <ul class="Accordion-subElements">
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(1);">Video 1</a></li>
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(2);">Video 2</a></li>
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(3);">Video 3</a></li>
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(4);">Video 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="Accordion-item">
+                        <label for="checkboxes-menu2">Jackpots</label>
+                        <input id="checkboxes-menu2" type="checkbox" name="menu" />
+                        <ul class="Accordion-subElements">
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(5);">Video 1</a></li>
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(6);">Video 2</a></li>
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(7);">Video 3</a></li>
+                            <li class="Accordion-subElement"><a href="#" onclick="popupOpen(8);">Video 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
             <main>
                 <div class="search-container">
                     <form>
@@ -79,153 +63,48 @@
                         </button>
                     </form>
                 </div>
-                <div class="content">
-                    <h1>Free Bets</h1>
-                    <div class="grid-container">
-                        <div class="grid-row">
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <a
-                                                class="s3-btn"
-                                                name="Open"
-                                                onclick="popupOpen();"
-                                                ><img
-                                                    src="http://placekitten.com/250/200"
-                                            /></a>
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 1</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <img
-                                                src="http://placekitten.com/250/200"
-                                            />
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 2</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <img
-                                                src="http://placekitten.com/250/200"
-                                            />
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 3</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <img
-                                                src="http://placekitten.com/250/200"
-                                            />
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 4</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="content"></div>
+            </main>
+            <!-- <footer></footer> -->
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"
+            integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0="
+            crossorigin="anonymous"
+        ></script>
+        <script src="main.js"></script>
+
+        <script type="text/template" id="categoryItemTpl">
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top">
+                            <a class="s3-btn" name="Open" onclick="popupOpen(<%= id %>);">
+                                <img src="<%= img %>" width="250" height="200" />
+                            </a>
                         </div>
-                    </div>
-                    <br /><br />
-                    <h1>Jackpots</h1>
-                    <div class="grid-container">
-                        <div class="grid-row">
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <a
-                                                class="s3-btn"
-                                                name="Open"
-                                                onclick="popupOpen();"
-                                                ><img
-                                                    src="http://placekitten.com/250/200"
-                                            /></a>
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 1</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <img
-                                                src="http://placekitten.com/250/200"
-                                            />
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 2</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <img
-                                                src="http://placekitten.com/250/200"
-                                            />
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 3</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div class="grid-item-wrapper">
-                                    <div class="grid-item-container">
-                                        <div class="grid-image-top">
-                                            <img
-                                                src="http://placekitten.com/250/200"
-                                            />
-                                        </div>
-                                        <div class="grid-item-content">
-                                            <span class="item-title">Video 4</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="grid-item-content">
+                            <span class="item-title"><%= name %></span>
                         </div>
                     </div>
                 </div>
-            </main>
-            <footer></footer>
-        </div>
-        <script type="text/javascript">
-            // Popup Open
-            function popupOpen() {
-                document.getElementById('popup').style.display = 'block';
-                document.getElementById('overlay').style.display = 'block';
-            }
-            // Popup Close
-            function popupClose() {
-                document.getElementById('popup').style.display = 'none';
-                document.getElementById('overlay').style.display = 'none';
-            }
+            </div>
+        </script>
+        s
+        <script type="text/template" id="categoryTpl">
+            <h1><%= category %></h1>
+            <div class='grid-container'>
+                <div class='grid-row'>
+                    <% _.each(videos, function(video){  %>
+                    <%= renderSub({id:video.id, name:video.name, img:video.img}) %>
+                    <% }); %>
+                </div>
+            </div>
         </script>
     </body>
 </html>

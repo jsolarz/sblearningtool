@@ -47,7 +47,7 @@ h1 {
 header {
     grid-column: span 3;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.6em;
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
@@ -55,7 +55,7 @@ header {
 }
 
 .header-title {
-    padding: 15px;
+    padding: 35px 0 0 15px;
     display: block;
     text-align: center;
     float: left;
@@ -159,7 +159,7 @@ footer {
 }
 
 .item-title {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 26px;
     font-weight: 700;
     margin-bottom: 18px;
@@ -279,10 +279,19 @@ footer {
     z-index: 101;
     width: 670px;
     /*Change your width here*/
-    height: 400px;
+    height: 500px;
     /*Change your height here*/
     margin: auto;
     /* Popup Inner */
+}
+
+#popup .video-title {
+    padding: 20px;
+    display: block;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #000;
 }
 @media (max-width: 768px) {
     .popup {
@@ -312,7 +321,7 @@ input.s3-btn {
     background: #f1f1f1;
     border: none;
     width: 200px;
-    height: 50px;
+    height: 250px;
     cursor: pointer;
     position: absolute;
     top: 0;
