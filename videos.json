@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "category": "Free Bets",
         "videos": [
             {
@@ -33,6 +34,7 @@
         ]
     },
     {
+        "id": 2,
         "category": "Jackpots",
         "videos": [
             {

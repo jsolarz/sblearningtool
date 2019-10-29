@@ -53,13 +53,39 @@ function loadVideos(categories) {
             $('#categoryTpl')
                 .remove()
                 .text()
+        ),
+        renderMenuCatSub = _.template(
+            $('#menuCategoryItemTpl')
+                .remove()
+                .text()
+        ),
+        renderMenu = _.template(
+            $('#menuCategoryTpl')
+                .remove()
+                .text()
         );
 
     var videosTpl = _.map(categories, function(category) {
-        return renderMain({ category: category.category, videos: category.videos, renderSub: renderSub });
+        return renderMain({
+            id: category.id,
+            category: category.category,
+            videos: category.videos,
+            renderSub: renderSub
+        });
     });
 
+    var videosMenuTpl = _.map(categories, function(category) {
+        return renderMenu({
+            id: category.id,
+            category: category.category,
+            videos: category.videos,
+            renderSub: renderMenuCatSub
+        });
+    });
+
+    console.log(videosMenuTpl);
     $('.content').html(videosTpl);
+    $('.Accordion').html(videosMenuTpl);
 }
 
 var videos;
