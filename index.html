@@ -5,16 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>SB Learning Tool</title>
-        <link
-            href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Roboto&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Roboto&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" media="all" href="reset.css" />
         <link rel="stylesheet" type="text/css" media="all" href="site.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css"
-            rel="stylesheet"
-        />
+        <link href="https://cdn.jsdelivr.net/npm/ficons@1.1.52/dist/ficons/font.css" rel="stylesheet" />
     </header>
     <body>
         <!-- Overlay -->
@@ -22,31 +16,17 @@
         <!-- Popup -->
         <div class="popup" id="popup" style="display:none;">
             <div class="popup-inner">
-                <input
-                    type="button"
-                    name="Close"
-                    class="s3-btn-close"
-                    onclick="popupClose();"
-                    value="&times;"
-                />
+                <input type="button" name="Close" class="s3-btn-close" onclick="popupClose();" value="&times;" />
 
                 <h2 class="video-title">Video player</h2>
-                <video
-                    id="helpVideo"
-                    controls="controls"
-                    poster="http://placekitten.com/640/300"
-                ></video>
+                <video id="helpVideo" controls="controls" poster="http://placekitten.com/640/300"></video>
             </div>
         </div>
         <div class="container">
             <header>
                 <h1 class="header-title">Watch & Learn</h1>
                 <div class="logo-container">
-                    <img
-                        src="SBTECH_LOGO_RGB_COLOUR.PNG"
-                        height="100"
-                        width="100"
-                    />
+                    <img src="SBTECH_LOGO_RGB_COLOUR.PNG" height="100" width="100" />
                 </div>
             </header>
             <nav>
@@ -79,12 +59,12 @@
         <script src="main.js"></script>
 
         <script type="text/template" id="categoryItemTpl">
-            <div class="grid-item">
+            <div class="grid-item"  title="<%= name %>">
                 <div class="grid-item-wrapper">
                     <div class="grid-item-container">
                         <div class="grid-image-top">
                             <a class="s3-btn" name="Open" onclick="popupOpen(<%= id %>);">
-                                <img src="<%= img %>" width="250" height="200" />
+                                <img src="<%= img %>" width="250" height="200" alt="<%= name %>" />
                             </a>
                         </div>
                         <div class="grid-item-content">
@@ -106,8 +86,8 @@
         </script>
         <script type="text/template" id="menuCategoryItemTpl">
 
-            <li class="Accordion-subElement">
-                <a href="#" onclick="popupOpen(<%= id %>);"><%= name %>></a>
+            <li class="Accordion-subElement "  title="<%= name %>">
+                <a href="#" onclick="popupOpen(<%= id %>);" class="ellipsis" title="<%= name %>"><%= name %></a>
             </li>
         </script>
         <script type="text/template" id="menuCategoryTpl">

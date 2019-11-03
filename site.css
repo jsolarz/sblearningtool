@@ -84,6 +84,7 @@ footer {
 .grid-container {
     width: 98%;
     margin: 0 auto;
+    margin: 0 auto 25px auto;
 }
 
 .grid-row {
@@ -95,6 +96,7 @@ footer {
 
     /* make it smooth on iOS */
     -webkit-overflow-scrolling: touch;
+    margin-bottom: 10px;
 }
 
 .grid-item-wrapper {
@@ -120,7 +122,7 @@ footer {
 }
 
 .grid-item {
-    height: 270px;
+    height: 300px;
     flex-basis: 20%;
     -ms-flex: auto;
     width: 250px;
@@ -372,13 +374,20 @@ video {
     background-color: #292929;
 }
 
+.ellipsis {
+    text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+}
 .Accordion-subElements {
     padding-left: 0;
     background-color: #ecf0f1;
 }
 
 .Accordion-subElement {
-    height: 0;  
+    height: 0;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
     -webkit-transform: scale(0);
