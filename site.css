@@ -122,7 +122,7 @@ footer {
 }
 
 .grid-item {
-    height: 300px;
+    /*height: 300px;*/
     flex-basis: 20%;
     -ms-flex: auto;
     width: 250px;
